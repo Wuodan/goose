@@ -28,7 +28,16 @@ Goose must not read or migrate secrets from the keyring while `GOOSE_DISABLE_KEY
 
 **Screenshots**
 
-Not applicable.
+Not applicable. Here's the output in bash:
+
+```text
+$ GOOSE_DISABLE_KEYRING=1 goose
+
+  error: Error Configuration value not found: OPENROUTER_API_KEY.
+Please check your system keychain and run 'goose configure' again.
+If your system is unable to use the keyring, please try setting secret key(s) via environment variables.
+For more info, see: https://goose-docs.ai/docs/troubleshooting/#keychainkeyring-errors
+```
 
 ---
 
@@ -36,7 +45,7 @@ Not applicable.
 
 - **OS & Arch:** Nobara Linux, x86_64
 - **Interface:** CLI
-- **Version:** Current development build
+- **Version:** `1.53.0` and current development build
 - **Extensions enabled:** None
 - **Provider & Model:** OpenRouter (model not relevant)
 
